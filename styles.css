@@ -1,0 +1,146 @@
+/* 글씨체 추가 */
+@font-face {
+    font-family: 'FONT';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunDodum-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 기본 스타일 초기화 */
+body {
+    margin: 0;
+    font-family: 'FONT', Arial, sans-serif; /* 기본 글씨체를 'FONT'로 설정 */
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    background-color: #0073e6;
+    color: #fff;
+    padding: 1.5em 0;
+    font-family: 'FONT', Arial, sans-serif; /* 헤더에 글씨체 적용 */
+    position: relative; /* 뒤로가기 버튼 기준 설정 */
+}
+
+header h1 {
+    margin: 0;
+}
+
+header .login-section {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 10px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: 'FONT', Arial, sans-serif; /* 본문에 글씨체 적용 */
+}
+
+.product {
+    text-align: center;
+}
+
+.product-image {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    display: block;
+}
+
+.price {
+    font-size: 1.5em;
+    color: #0073e6;
+}
+
+button {
+    background-color: #0073e6;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'FONT', Arial, sans-serif; /* 버튼에 글씨체 적용 */
+}
+
+button:hover {
+    background-color: #005bb5;
+}
+
+/* 뒤로가기 버튼 스타일 */
+.back-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 8px 12px;
+    background-color: #005bb5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'FONT', Arial, sans-serif;
+}
+
+.back-button:hover {
+    background-color: #003f88;
+}
+
+.shipping-info, .payment-info {
+    margin-top: 20px;
+}
+
+.shipping-info h3, .payment-info h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.reviews {
+    margin-top: 30px;
+}
+
+#reviews-list {
+    list-style: none;
+    padding: 0;
+}
+
+#reviews-list li {
+    background: #f9f9f9;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: 'FONT', Arial, sans-serif; /* 리뷰 글씨체 적용 */
+}
+
+form {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form input {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: 'FONT', Arial, sans-serif; /* 입력 필드 글씨체 적용 */
+}
+
+form button {
+    padding: 8px 15px;
+    font-family: 'FONT', Arial, sans-serif;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #0073e6;
+    color: white;
+    font-family: 'FONT', Arial, sans-serif;
+}

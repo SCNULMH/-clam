@@ -1,0 +1,90 @@
+    <!DOCTYPE html>
+    <html lang="ko">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="신선하고 건강한 재첩을 만나보세요. 영양 가득한 자연의 맛!">
+    <title>선우 재첩 스토어</title>
+    <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+    <header>
+        <h1>선우 재첩</h1>
+        <p>자연이 선물한 깨끗하고 건강한 맛, 재첩!</p>
+        <div class="login-section">
+        <button id="login-button">로그인</button>
+        <button id="signup-button">회원가입</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="product">
+        <img src="재첩.jpg" alt="재첩 이미지" class="product-image">
+        <h2>신선한 재첩</h2>
+        <p class="description">
+            재첩은 청정 자연에서 자란 영양 가득한 조개류로, 
+            부드럽고 담백한 맛이 특징입니다. 칼슘과 단백질이 풍부해 
+            건강한 식사를 위한 최고의 선택입니다.
+        </p>
+        <p class="price">₩15,000</p>
+        <button id="buy-button">지금 구매하기</button>
+        </section>
+
+        <section class="shipping-info">
+        <h3>배송 안내</h3>
+        <p>회원: 무료 배송</p>
+        <p>비회원: 택배비 ₩3,000 추가</p>
+        </section>
+
+        <section class="payment-info">
+        <h3>결제 안내</h3>
+        <p>무통장 입금만 가능합니다. 상세 정보는 구매 시 제공됩니다.</p>
+        </section>
+
+        <section class="reviews">
+        <h3>고객 리뷰</h3>
+        <ul id="reviews-list">
+            <!-- 리뷰가 여기에 동적으로 추가됩니다 -->
+        </ul>
+        <form id="review-form">
+            <input type="text" id="review-input" placeholder="리뷰를 작성해주세요" required>
+            <button type="submit">등록</button>
+        </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 재첩 스토어. 모든 권리 보유.</p>
+    </footer>
+
+    <script>
+        // 구매 버튼 클릭 이벤트
+        document.getElementById('buy-button').addEventListener('click', () => {
+          window.location.href = "order.html";
+        });
+    
+        // 로그인 버튼 클릭 이벤트
+        document.getElementById('login-button').addEventListener('click', () => {
+          window.location.href = "login.html";
+        });
+    
+        // 회원가입 버튼 클릭 이벤트
+        document.getElementById('signup-button').addEventListener('click', () => {
+          window.location.href = "signup.html";
+        });
+    
+        // 리뷰 작성 이벤트 처리
+        const reviewForm = document.getElementById('review-form');
+        const reviewsList = document.getElementById('reviews-list');
+    
+        reviewForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const reviewInput = document.getElementById('review-input');
+          const newReview = document.createElement('li');
+          newReview.textContent = reviewInput.value;
+          reviewsList.appendChild(newReview);
+          reviewInput.value = '';
+        });
+      </script>
+    </body>
+    </html>
